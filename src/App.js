@@ -6,7 +6,7 @@ import {ApolloProvider} from '@apollo/react-hooks'
 import ApolloClient from 'apollo-boost';
 
 import {CenteredBox} from './Components';
-
+import Home  from './Pages/Home/Home';
 
 import {
   BrowserRouter as Router,
@@ -17,7 +17,8 @@ import {
 
 
 import { SignIn } from './Container/loginContainer';
-
+// import Home from './Pages/Home/Home';
+import Index from './Pages/index';
 const client = new ApolloClient({
   uri: 'http://192.168.1.106/graphql/',
   credentials: 'include'
@@ -28,8 +29,11 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <SignIn/>
+          </Route>
+          <Route exact path='/home'>
+            <Index/>
           </Route>
         </Switch>
       </Router>

@@ -18,7 +18,7 @@ export const Loader = () =>
     </div>
 
 export const SignIn = ({username, password}) => {
-         const {signIn, data} = useMutation(LOGIN,{variables:{username, password}})
+        const [signIn, {data}] = useMutation(LOGIN,{variables:{username, password}})
         console.log("token", data)
         let t = data?localStorage.setItem(authToken, data.token):false
         return <Login handleSubmit={()=>signIn({username, password})}/>
