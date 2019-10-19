@@ -19,10 +19,7 @@ import {
 import { SignIn } from './Container/loginContainer';
 
 const client = new ApolloClient({
-  uri: 'https://yog-ayur.herokuapp.com/graphql/',
-  headers: {
-    "Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwiZXhwIjoxNTcwOTg1MjM5LCJvcmlnSWF0IjoxNTcwOTg0OTM5fQ.fLmT6DUffTMpvc9goC0rYN0IiPNpWepc8KzXIo5MDVo"
-  },
+  uri: 'http://192.168.1.106/graphql/',
   credentials: 'include'
 });
 
